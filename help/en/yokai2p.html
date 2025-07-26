@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 150%;
+        }
+
+        a {
+            text-decoration: underline;
+            color: lightblue;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Yokai Septet - 2 player variant</h2>
+
+    <p>Yokai Septet is a 2-4 player trick taking game designed by Muneyuki
+        Yokouchi. The two-player variant was designed by Sean Ross. It appears
+        in Trickster's Table with the permission of Ninja Star Games (thank you
+        Dan Kobayashi!).</p>
+
+    <p><a
+            onclick="OpenLink.postMessage('https://www.kickstarter.com/projects/ninjastargames/yokai-septet-pocket-edition?ref=eogs7b')">Support
+            the new Yokai Septet Pocket Edition Kickstarter</a></p>
+
+    <p><a href="#reviews">Jump to reviews</a></p>
+
+    <iframe width="100%" height="735"
+        src="https://www.youtube.com/embed/ZKXhmhqjCvo"
+        title="How to play Yokai Septet 2-player in Trickster&#39;s Table"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <p>Supporters whose donations funded the development of this game including
+        the <a
+            href="https://www.patreon.com/posts/working-on-yokai-104338639">Rust
+            rewrite</a> (thank you!):</p>
+
+    <ul>
+        <li>Trick Talkers - check out their <a
+                onclick="OpenLink.postMessage('https://anchor.fm/tricktalkers/')">amazing
+                podcast about trick taking games</a></li>
+        <li>Jacob White</li>
+        <li>Shreesh - designer of <a
+                onclick="OpenLink.postMessage('https://pandasaurusgames.com/products/aurum')">Aurum
+                published by Pandasaurus</a></li>
+        <li>Taylor, Trick, and Table from <a
+                onclick="OpenLink.postMessage('https://www.youtube.com/channel/UCGeRFP9_y9lA14zUZZbBf5Q')">Taylor's
+                Trick Taking Table</a>
+        </li>
+        <li>Eddie G</li>
+        <li>Justin Radziewicz</li>
+        <li>Harish Narayanan</li>
+        <li>Alex J</li>
+        <li>Matt Montgomery</li>
+        <li>Iain Cheyne</li>
+        <li>Justus</li>
+        <li>TimTix</li>
+        <li>veganjay</li>
+        <li>Iain Cheyne</li>
+        <li>4 anonymous supporters</li>
+    </ul>
+
+    <h3>Game Overview</h3>
+    <p>You want to capture <b>4 or more Boss Yokai (7s)</b> to win a round. You
+        will <b>lose the round if you win 13 tricks</b>. If you play all 23
+        tricks, then the player who won the last trick wins the round.</p>
+
+    <h4>Card Distributions</h4>
+
+    <img src="yokai-distribution.png" />
+
+    <h3>Round Setup</h3>
+
+    <p>The deck of 49 cards is shuffled. 7 cards are dealt face-down to each
+        player. 6 cards are placed face-up on top of the previous 7 cards. These
+        piles are called the straw piles.</p>
+
+    <p>Next, <b>11 cards are dealt face-down</b> to each player. One card is
+        dealt face-up which determines the <b>Trump Suit</b> for the round.</p>
+
+    <p>Finally, each <b>player discards one card</b> from their hand face-down.
+        <b>You may not discard a Boss Yokai.</b> The discarded cards are not
+        used this round.
+    </p>
+
+    <h3>Before the Round Begins</h3>
+
+    <p>If you have Boss Yokai cards face-up in your straw pile, you may choose
+        to swap one of them with one of the two cards beneath it. <b>You may not
+            look at the face-down cards before deciding to swap</b>. If the
+        face-down card you chose is also a Boss Yokai, then you must choose
+        which one to keep face-up and which one to turn face-down. (Please note
+        that in the Trickster's Table implementation, Boss Yokai cards will not
+        appear as face-up cards on the straw pile.)</p>
+
+    <p>The player who dealt the cards leads the first trick. In subsequent
+        rounds, swap the dealer so that the first lead changes each round.</p>
+
+    <h3>Game Play Rules</h3>
+    <p>Each round, you'll play multiple turns called Tricks where each player
+        will play one card from their hand.
+        The Lead Player will play first. They choose any card from their hand
+        and play it face-up in front of them. The other player must now play a
+        card of the same suit as the Lead Player. If a player has no cards of
+        that suit, they may play any card in their hand.</p>
+
+    <h4>Taking a trick</h4>
+    <p>After both players have played a card, check to see if either played the
+        <b>A card</b>. If they did, that player takes the trick.
+    </p>
+
+    <p>If neither played the A card, check if either played <b>a card of the
+            Trump Suit</b>. If either did, then the higher card of that suit
+        takes the trick.</p>
+
+    <p>Otherwise, if both players played the same suit then the higher card
+        takes the trick. If two different suits were played then the Lead Player
+        takes the trick.</p>
+
+    <p>The player who took the trick now becomes the Lead Player.</p>
+
+    <h3>End of a Round</h3>
+    <p>The round is over, and a round winner is determined, if any of the
+        following has happened.</p>
+
+    <ul>
+        <li>A player who has captured a total of <b>4 or more Boss Yokai cards
+                wins</b> the round.</li>
+        <li>A player has taken <b>13 tricks but has captured 3 or fewer Boss
+                Yokai cards. The other player wins</b> the round.</li>
+        <li>No one has cards left in their hands. <b>The player who won the last
+                trick</b> wins the round.</li>
+    </ul>
+
+    <h3>Scoring</h3>
+
+    <p>Only the player who won a round scores points. The other player <b>does
+            not score</b>, regardless of how many cards they took.</p>
+
+    <p>If a player has won the round because the other player took 13 tricks,
+        the winning player <b>takes all Boss Yokai cards remaining in both
+            players' hands and the straw piles</b>. They add these to the Boss
+        Yokai they took this round.</p>
+
+    <p>The winning player scores as many points as there are white stars on Boss
+        Yokai they captured this round (ignoring the Boss Yokai of the trump
+        suit).</p>
+
+    <h3>End of the Game</h3>
+    <p>If a player has 7 or more points they win!</p>
+
+    <p>Otherwise, a new hand is dealt and another round is played. The lead
+        alternates between players.</p>
+
+    <a name="reviews"></a>
+    <h3>Reviews of Yokai Septet</h3>
+
+    <ul>
+        <li><a
+                onclick="OpenLink.postMessage('https://www.youtube.com/watch?v=uRZEgE6wuWM')">Taylor's
+                Trick Taking Table</a> 2-player rules discussed</li>
+        <li><a
+                onclick="OpenLink.postMessage('https://www.youtube.com/watch?v=UPfWflLawfY')">Cards
+                Unbarred</a> 3-4 player rules plus passing convention tips</li>
+        <li><a
+                onclick="OpenLink.postMessage('https://www.youtube.com/watch?v=Ah6OihvUz0I')">Brains
+                on Games</a> 3-4 player game review</li>
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PALA: Impressionism (4 Players)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 150%;
+        }
+
+        a {
+            text-decoration: underline;
+            color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pala: Impressionism (4 Players)</h1>
+    <p>Designed by Jeffrey D. Allers</p>
+    <p>Physical version published by Suki Games, Japan</p>
+    <p>Art by Anja Heidenreich / Heiko Günther</p>
+
+    <h2>Objective</h2>
+    <p>In Pala: Impressionism, you do not want to score points. The game ends
+        when a player reaches 45 points or more; the player with the lowest
+        score wins.</p>
+
+    <p>Supporters whose donations funded the development of the Trickster's
+        Table implementation of this game (thank
+        you!):</p>
+
+    <ul>
+        <li>Trick Talkers - check out their <a
+                onclick="OpenLink.postMessage('https://anchor.fm/tricktalkers/')">amazing
+                podcast about trick taking games</a></li>
+        <li>Jacob White</li>
+        <li>Shreesh - designer of <a
+                onclick="OpenLink.postMessage('https://pandasaurusgames.com/products/aurum')">Aurum
+                published by Pandasaurus</a></li>
+        <li>Taylor, Trick, and Table from <a
+                onclick="OpenLink.postMessage('https://www.youtube.com/channel/UCGeRFP9_y9lA14zUZZbBf5Q')">Taylor's
+                Trick Taking
+                Table</a></li>
+        <li>Justin Radziewicz</li>
+        <li>Harish Narayanan</li>
+        <li>Alex J</li>
+        <li>Justus</li>
+        <li>Matt Montgomery</li>
+        <li>TimTix</li>
+        <li>Eddie G</li>
+        <li>veganjay</li>
+        <li>Iain Cheyne</li>
+        <li>ImaginEric</li>
+        <li>Greg Jones</li>
+        <li>Aaron Rieke</li>
+        <li>Jarrett McDonald</li>
+        <li>Kelly C.</li>
+        <li>eyechoirs</li>
+        <li>Graham Fish</li>
+        <li>Charlie Brown</li>
+        <li>Mark Engle</li>
+        <li>Sam Lane</li>
+        <li>10 anonymous supporters</li>
+    </ul>
+
+    <h2>Deck Composition</h2>
+    <p>48 cards (8 each of red, blue, and yellow - 1,1,2,2,3,3,4,5; 8 each of
+        orange, green, and purple - 2,3,4,5,6,7,8,9)</p>
+
+    <h2>Setup</h2>
+    <ol>
+        <li>Each player is dealt 11 cards.</li>
+        <li>The remaining 4 cards are discarded face-down and are not used for
+            the current hand.</li>
+    </ol>
+
+    <h2>Bidding</h2>
+    <p>In turn order, each player may play one card onto an available slot or
+        pass; you cannot bid a color already played. Continue until all four
+        slots are filled. The colors on the board determine scoring at round's
+        end; card values are irrelevant.</p>
+
+    <h2>Trick Play</h2>
+    <ol>
+        <li>
+            <strong>Lead:</strong> Winner of the previous trick plays any one
+            card to set the trick's initial color.
+        </li>
+        <li>
+            <strong>Follow Suit:</strong> In clockwise order, if you have a card
+            in the trick's color:
+            <ul>
+                <li><strong>Primary (red/blue/yellow):</strong> play one card of
+                    that color.</li>
+                <li><strong>Secondary (orange/green/purple):</strong> either
+                    play one card of that color or <em>mix</em>.</li>
+            </ul>
+            If you have no cards in the trick's color, you may:
+            <ul>
+                <li><strong>Mix</strong> (secondary only): play two primary
+                    cards that combine to the secondary color; their values sum.
+                </li>
+                <li><strong>Smear</strong> (primary only): play one different
+                    primary card onto the current winning card to change the
+                    color, then play one secondary card of that new color.</li>
+                <li><strong>Junk</strong>: play any single non-matching card.
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Awarding Tricks</h2>
+    <p>After all have played, the highest-value card (or summed value if mixed)
+        in the trick's final color wins; the winner takes all cards into their
+        score pile and leads the next trick.</p>
+
+    <h2>Ending the Round</h2>
+    <p>Players who run out of cards sit out. The round ends after a trick if the
+        winner has no cards or only one player remains with cards.</p>
+
+    <h2>Scoring</h2>
+    <ul>
+        <li>Take all won-trick cards into your score pile, then add any
+            remaining hand cards.</li>
+        <li>For each card in your pile:
+            <ul>
+                <li><strong>Color not on board:</strong> discard it (0 points).
+                </li>
+                <li><strong>X space (cancel) color:</strong> discard one other
+                    card for each (highest value cards will automatically be
+                    discarded); excess cancel cards are -1 point each.</li>
+                <li><strong>+1 space colors:</strong> 1 point per card.
+                </li>
+                <li><strong>+# space color:</strong> score the card's face value
+                    in points.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>End of Game</h2>
+    <p>If no one has reached 45 points, the cards are all shuffled and another
+        hand is played. The game ends when a player reaches 45 or more points;
+        the player with the lowest score wins.</p>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 150%;
+        }
+
+        a {
+            text-decoration: underline;
+            color: lightblue;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+
+        .ketchup {
+            color: #ff0000;
+            /* Red color for Ketchup */
+        }
+
+        .mustard {
+            color: #ffff00;
+            /* Yellow color for Mustard */
+        }
+
+        .relish {
+            color: #00ff00;
+            /* Green color for Relish */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hotdog</h1>
+
+    <p>A trick taking game for two players by Sean Ross</p>
+
+    <iframe width="100%" height="735"
+        src="https://www.youtube.com/embed/IfekVOrDj7A"
+        title="How to play the trick taking game Hotdog in the Trickster&#39;s Table app"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <p>Supporters whose donations funded the development of the Trickster's
+        Table implementation of this game (thank
+        you!):</p>
+
+    <ul>
+        <li>Trick Talkers - check out their <a
+                onclick="OpenLink.postMessage('https://anchor.fm/tricktalkers/')">amazing
+                podcast about trick taking games</a></li>
+        <li>Jacob White</li>
+        <li>Shreesh - designer of <a
+                onclick="OpenLink.postMessage('https://pandasaurusgames.com/products/aurum')">Aurum
+                published by Pandasaurus</a></li>
+        <li>Taylor, Trick, and Table from <a
+                onclick="OpenLink.postMessage('https://www.youtube.com/channel/UCGeRFP9_y9lA14zUZZbBf5Q')">Taylor's
+                Trick Taking
+                Table</a></li>
+        <li>Justin Radziewicz</li>
+        <li>Harish Narayanan</li>
+        <li>Alex J</li>
+        <li>Justus</li>
+        <li>Matt Montgomery</li>
+        <li>TimTix</li>
+        <li>Eddie G</li>
+        <li>veganjay</li>
+        <li>Iain Cheyne</li>
+        <li>ImaginEric</li>
+        <li>Greg Jones</li>
+        <li>10 anonymous supporters</li>
+    </ul>
+
+    <h3>GAME OBJECTIVE</h3>
+    <p>Be the first player to win 5 game points</p>
+
+    <h3>CARDS</h3>
+    <p>36 cards, 1 - 9 in each suit</p>
+
+    <h3>RANKING</h3>
+    <p>Ketchup = (low) 1 2 3 4 5 6 7 8 9, Trump Suit 1 2 3 4 5 6 7 8 9, and
+        Special Rank (high)</p>
+    <p>Mustard = (low) 9 8 7 6 5 4 3 2 1, Trump Suit 9 8 7 6 5 4 3 2 1, and
+        Special Rank (high)</p>
+    <p>The Works = Each trick alternates ranking structure, no trump suit but
+        there is a special rank</p>
+
+    <h2>INTRODUCTION</h2>
+    <p>Hotdog is a two-player trick-taking game. At the beginning of each round,
+        players will have a chance to pick the card ranking, trump suit, and a
+        special rank. Along with a hand of cards, each player will also be dealt
+        a plate of cards. Plate cards count as part of the player's hand, but
+        they are visible for all to see.</p>
+
+    <h2>MATERIALS</h2>
+    <p>Hotdog is played with a 36-card pack that consists of ones through 9's in
+        four suits. A piece of paper and a pencil is needed for keeping score.
+        See the SCORE section for more details.</p>
+
+    <h2>SETUP</h2>
+    <p>Cut the deck to determine who will be the first dealer. The player who
+        cuts the lowest card deals first. For the following rounds, the deal
+        alternates between the two players.</p>
+    <p>Each player is dealt five cards face down. The cards should form a row in
+        front of each player. Next, five cards are dealt face up with one card
+        on top of each face-down card. This row is referred to as the Plate.
+        Finally, each player is dealt a hand of 7 cards. These cards are not to
+        be seen by the opposite player.</p>
+    <p>The remaining two cards are placed face-down off to the side.</p>
+
+    <h2>PICK YOUR TOPPINGS (Bidding)</h2>
+    <p>After looking at their hand, the non-dealer has the first chance to pick
+        the deck's ranking structure and a trump suit. They may choose to play
+        with Ketchup, Mustard, or The Works.</p>
+    <p>If a player does not wish to pick a topping, they may pass. Passing gives
+        the opposite player an opportunity to pick.</p>
+    <p>The player who picks the toppings for the round is called the Picker.</p>
+
+    <h2>PLAYING WITH KETCHUP</h2>
+    <p>If a player wants to play with the standard ranking in place, they say,
+        "Let's play with Ketchup." Then, they pick the trump suit for the round.
+        This suit becomes the highest-ranking suit for the round.</p>
+    <p>(Example) Player 1 says, "Let's play with Ketchup. Spades are trump." The
+        cards will rank (low) 1 - 9 (high), and Spades will be the highest
+        suit for the round.</p>
+
+    <h2>PLAYING WITH MUSTARD</h2>
+    <p>If the player wants to play with a reversed card ranking, meaning 9's are
+        low and ones are high, they say, "Let's play with Mustard." Then they
+        pick the suit they want as trump.</p>
+    <p>(Example) Player 1 says, "Let's play with Mustard. Diamonds are trump."
+        This means that the round will be played with the cards ranking (low) 9
+        - 1 (high), and Diamonds are the highest suit for the round.</p>
+
+    <h2>PLAYING WITH THE WORKS</h2>
+    <p>The third option a player has is to pick The Works. This means that there
+        is no trump suit; it also means the card ranking will switch direction
+        with each trick!</p>
+    <p>When playing with the works, the player who leads the first trick decides
+        whether it is played with Ketchup or Mustard. From there, card ranking
+        alternates with each trick.</p>
+
+    <h2>SMOTHERING (Overbidding)</h2>
+    <p>If Ketchup or Mustard is picked, and the opponent does not like what has
+        been called, they can choose to Smother (overbid) by saying, "I'll
+        smother it". The other player's choice is cancelled, and the round will
+        be played with The Works instead. The player who smothered becomes the
+        Picker.</p>
+
+    <h2>ADDING SOME RELISH</h2>
+    <p>After Ketchup, Mustard, or The Works has been picked, the opposite player
+        may add Relish by selecting a special rank for the round.</p>
+    <p>(Example) The player wants 3's as the special rank, so they say, "I'll
+        add some 3's as Relish."</p>
+    <p>If they do not wish to select a special rank, they can say "No Relish".
+    </p>
+    <p>Cards of this special rank automatically win the trick if the trick
+        includes a card from a different suit. If two special rank cards are
+        played, the second card wins.</p>
+
+    <h2>FIRST TRICK</h2>
+    <p>The Picker leads to the first trick. If both players pass, the non-dealer
+        leads the first trick. They may play one card from their hand, or they
+        can play one face-up card from their plate. If a plate card is played,
+        and a face-down card is exposed, that card is not flipped face-up until
+        after the trick is complete.</p>
+    <p>The opposite player must follow suit if they can. If the player cannot
+        follow suit, they may play any card.</p>
+
+    <h2>SCORE</h2>
+    <p>The Picker must capture at least 9 tricks. Doing so earns them 1 game
+        point. If they capture 12 tricks, they earn 2 game points. If the Picker
+        captures 15 tricks, they automatically win the game.</p>
+    <p>However, if the Picker fails to capture at least 9 tricks, the opponent
+        earns 2 game points. If the opponent captures 12 tricks they
+        automatically win the game.</p>
+
+    <h2>CONTINUE THE GAME</h2>
+    <p>Once the score for the round is tallied, collect the cards. Deal
+        alternates each round. Continue playing rounds until the game ends.</p>
+
+    <h2>WIN</h2>
+    <p>The first player to earn 5 game points wins.</p>
+    <p>For a complete match, play the best of three games.</p>
+
+    <h2>THE FOOTLONG OPTION (Variant)</h2>
+    <p>At any time during the bidding (including after a Smother), when it is
+        your turn to bid you can take The Footlong Option by saying "I'll take a
+        Footlong..."</p>
+    <p>(Example) Player 1 says, "Let's play with Ketchup. Spades are trump."
+        Player 2 says "I'll take a Footlong with Mustard. Diamonds are trump."
+    </p>
+    <p>Player 1 can Smother to overbid or choose Relish to accept the bid.</p>
+
+    <h2>THE TEAM</h2>
+    <p>Designer: Sean Ross</p>
+    <p>Testers: Adley, Robert B., Chris Cepil, Daniel Kenel, Tori Kenel, Taylor
+        Reiner, Michael Shirk</p>
+    <p>Logo: Carol Lagrow</p>
+
+    <h2>IMPORTANT LINKS</h2>
+    <p>Download the PC.IO file here: <a
+            onclick="OpenLink.postMessage('https://github.com/seandavidross/Rooster/blob/master/hotdog.pcio?raw=true')">Download</a>
+    </p>
+
+    <p>Hotdog v1.6.0</p>
+    <p>Last Updated 8 November 2022</p>
+    <p>Originally Published 17 June 2022</p>
+    <p>This work is licensed under a <a
+            href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative
+            Commons</a> <a
+            href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives
+            4.0 International License.</a></p>
+
+
+    <p>If you would like to support the designer for this or future designs,
+        please consider becoming a patron: <a
+            onclick="OpenLink.postMessage('https://www.patreon.com/seandavidross')">Patreon</a>
+    </p>
+</body>
+
+</html>

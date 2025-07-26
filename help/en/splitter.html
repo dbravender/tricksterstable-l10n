@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 150%;
+        }
+
+        a {
+            text-decoration: underline;
+            color: lightblue;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Splitter</h2>
+
+    <p>Splitter is a roll-and-write game designed by Stefan Nikolic. The game
+        can be played with any number of players
+        but the Trickster's Table implementation only allows solo play.</p>
+
+    <!--<iframe width="100%" height="735" src="https://www.youtube.com/embed/ZKXhmhqjCvo"
+        title="How to play Yokai Septet 2-player in Trickster&#39;s Table" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>-->
+
+    <p>Supporters whose donations funded the development of this game (thank
+        you!):</p>
+
+    <ul>
+        <li>Trick Talkers - check out their <a
+                onclick="OpenLink.postMessage('https://anchor.fm/tricktalkers/')">amazing
+                podcast about trick taking games</a></li>
+        <li>Jacob White</li>
+        <li>Shreesh - designer of <a
+                onclick="OpenLink.postMessage('https://pandasaurusgames.com/products/aurum')">Aurum
+                published by Pandasaurus</a></li>
+        <li>Taylor, Trick, and Table from <a
+                onclick="OpenLink.postMessage('https://www.youtube.com/channel/UCGeRFP9_y9lA14zUZZbBf5Q')">Taylor's
+                Trick Taking
+                Table</a>
+        <li>Justin Radziewicz</li>
+        <li>Harish Narayanan</li>
+        <li>tomatosoup</li>
+        <li>Alex J</li>
+        <li>Justus</li>
+        <li>Matt Montgomery</li>
+        <li>TimTix</li>
+        <li>8 anonymous supporters</li>
+    </ul>
+
+    The physical version of Splitter is distributed by:
+
+    <ul>
+        <li><a href="https://nsv-games.com/splitter/">Nürnberger-Spielkarten-Verlag
+                GmbH (NSV)</a></li>
+        <li><a href="https://pandasaurusgames.com/products/splitter">Pandasaurus
+                Games</a>
+    </ul>
+    </ul>
+
+    <h3>Game Overview</h3>
+    <p>
+        You roll two dice each turn. The dice to be played will be displayed on
+        the bottom of the screen. For example,
+        this is
+        what a 4 and 5 roll would look like:</p>
+
+    <img src="splitter/4and5.png">
+
+    <p>One die's value must be placed on any unoccupied spot on the board. The
+        value from the other die must be placed
+        on the opposite side of the board as though there was a mirror running
+        down the middle of the board. Tap on an
+        empty spot on the board to place the dice and lock your move in by
+        tapping the + symbol in the bottom right.</p>
+
+    <p>For example, if you roll a 4 and a 5 you may place them like this:</p>
+
+    <img src="splitter/4and5place1.png" />
+
+    <p>Or like this (or any other white square on the board for that matter)</p>
+
+    <img src="splitter/4and5place2.png" />
+
+    <p>The goal is to score as many points as possible.
+        Points are scored when there are exactly as many of the value displayed
+        on the dice in a cluster of orthoganally adjacent dice.
+        When a cluster is worth points the background color will fill in.</p>
+
+    <p>For example, each 1 by itself will score one point (the total score for
+        this board is 2 points):</p>
+
+    <img src="splitter/1and1scoring.png" />
+
+    <p>
+        However, if two 1s are next to each other they are worth 0 points:</p>
+
+    <img src="splitter/1and1notscoring.png" />
+
+    <p>Two 2s score 2 points, and three 3s score 3 points, and four 4s score 4
+        points, etc.</p>
+
+    <p>Any valid clusters that have a * square are worth double points.</p>
+
+    <p>On the B board type there are also squares marked with "s. If you put the
+        same number in all boxes with a " you
+        will receive 5 points. If you put a different number in one of the "s
+        you will get 0 points for this bonus. The
+        " will disappear to let you know this.</p>
+
+</body>
+
+</html>

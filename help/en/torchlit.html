@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Torchlit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 150%;
+        }
+
+        a {
+            text-decoration: underline;
+            color: lightblue;
+        }
+    </style>
+</head>
+
+</head>
+
+<body>
+    <h1>Torchlit</h1>
+    <p>Designed by David Spalinski</p>
+    <p>Graphic Design by David Spalinski</p>
+    <p>Box Cover Illustration by Phil Rynda</p>
+
+    Video from <a
+        onclick="OpenLink.postMessage('https://www.youtube.com/channel/UCGeRFP9_y9lA14zUZZbBf5Q')">Taylor's
+        Trick Taking Table</a> (linked with permission - jump to 5:16 for the
+    rule explanation):
+
+    <iframe width="100%" height="798"
+        src="https://www.youtube.com/embed/sX6HTUNRtZ0?&t=317s"
+        title="Torchlit and Draught Trick ~ Taylor&#39;s Trick-Taking Table"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+
+    <p>Supporters whose donations funded the development of the Trickster's
+        Table implementation of this game (thank
+        you!):</p>
+
+    <ul>
+        <li>Trick Talkers - check out their <a
+                onclick="OpenLink.postMessage('https://anchor.fm/tricktalkers/')">amazing
+                podcast about trick taking games</a></li>
+        <li>Jacob White</li>
+        <li>Shreesh - designer of <a
+                onclick="OpenLink.postMessage('https://pandasaurusgames.com/products/aurum')">Aurum
+                published by Pandasaurus</a></li>
+        <li>Taylor, Trick, and Table from <a
+                onclick="OpenLink.postMessage('https://www.youtube.com/channel/UCGeRFP9_y9lA14zUZZbBf5Q')">Taylor's
+                Trick Taking
+                Table</a></li>
+        <li>Justin Radziewicz</li>
+        <li>Harish Narayanan</li>
+        <li>Alex J</li>
+        <li>Justus</li>
+        <li>Matt Montgomery</li>
+        <li>TimTix</li>
+        <li>Eddie G</li>
+        <li>veganjay</li>
+        <li>Iain Cheyne</li>
+        <li>ImaginEric</li>
+        <li>Greg Jones</li>
+        <li>Aaron Rieke</li>
+        <li>Jarrett McDonald</li>
+        <li>Kelly C.</li>
+        <li>eyechoirs</li>
+        <li>Graham Fish</li>
+        <li>Charlie Brown</li>
+        <li>10 anonymous supporters</li>
+    </ul>
+
+    <h2>Overview</h2>
+    <p>In this trick-taking game, players decide when to win tricks and when to
+        increase the value of the number of tricks they think they will take.
+        After 3 rounds, the player with the most points wins!</p>
+
+    <h2>Deck Makeup</h2>
+    <ul>
+        <li>63 Monster Cards (0-7 in 7 colors)</li>
+    </ul>
+
+    <p>Note: the Trickster's Table implementation of this game uses standard
+        4-player rules but the physcial version supports 2-5 players and has
+        variant rules. See the official rulebook for more details.</p>
+
+    <h2>Round Flow</h2>
+    <ol>
+        <li><strong>Light a Torch:</strong> Each player selects a card face down
+            as their torch (a guess at how many tricks they'll win).</li>
+        <li><strong>Play Tricks:</strong> Players play cards clockwise,
+            following suit if able. Dragon cards allow free play. Determine the
+            winning number (highest dragon or highest of lead color).</li>
+        <li><strong>Move Adventurers:</strong> All who played the winning number
+            advance one dungeon. From dungeon 7, move to 0.</li>
+        <li><strong>Spawn Monsters:</strong> Player who played the lowest number
+            becomes Dungeon Warden and places cards into matching-numbered
+            dungeons (one per color).</li>
+    </ol>
+
+    <h2>Final Trick</h2>
+    <p>Before the final trick, players take back their torch card. No
+        suit-following requirement this round. Proceed with trick as usual.</p>
+
+    <h2>Relight Torches</h2>
+    <p>Reveal the unplayed card. If its number matches your dungeon location,
+        place it face down as a relit torch (worth bonus). Otherwise, place it
+        in that dungeon as a dropped torch card.</p>
+
+    <h2>Scoring</h2>
+    <ul>
+        <li>2 points per dropped torch card</li>
+        <li>2 points per dragon card</li>
+        <li>1 point per other monster card</li>
+        <li>Divide dungeon score among all players in the same dungeon (rounded
+            down)</li>
+        <li>+3 points for relighting your torch</li>
+    </ul>
+
+    <h2>Prepare Next Round</h2>
+    <ul>
+        <li>Return pawns to dungeon 0</li>
+        <li>Shuffle and redeal cards</li>
+        <li>New round starts with previous Dungeon Warden</li>
+    </ul>
+
+    <h2>End of Game</h2>
+    <p>After 3 rounds, the player with the highest total score wins. In a tie,
+        the player with the highest score in round 3 wins. Still tied? Share
+        victory. (Note: in the Trickster's Table implementation, if the human
+        player's score after 3 rounds is tied for the highest score it is
+        counted as a win for the human player. Don't tell the bots.)</p>
+
+</body>
+
+</html>

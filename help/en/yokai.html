@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 150%;
+        }
+
+        a {
+            text-decoration: underline;
+            color: lightblue;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Yokai Septet</h2>
+
+    <p>Supporters whose donations funded the development of this game (thank
+        you!):</p>
+
+    <ul>
+        <li>Trick Talkers - check out their <a
+                onclick="OpenLink.postMessage('https://anchor.fm/tricktalkers/')">amazing
+                podcast about trick taking games</a></li>
+        <li>Jacob White</li>
+        <li>Shreesh - designer of <a
+                onclick="OpenLink.postMessage('https://pandasaurusgames.com/products/aurum')">Aurum
+                published by Pandasaurus</a></li>
+        <li>Taylor, Trick, and Table from <a
+                onclick="OpenLink.postMessage('https://www.youtube.com/channel/UCGeRFP9_y9lA14zUZZbBf5Q')">Taylor's
+                Trick Taking
+                Table</a>
+        <li>Justin Radziewicz</li>
+        <li>Harish Narayanan</li>
+        <li>tomatosoup</li>
+        <li>Alex J</li>
+        <li>Justus</li>
+        <li>Matt Montgomery</li>
+        <li>TimTix</li>
+        <li>8 anonymous supporters</li>
+    </ul>
+
+    <p>Special thanks to Ryan Campbell (<a
+            onclick="OpenLink.postMessage('https://youtu.be/UPfWflLawfY?t=951')">his
+            video</a> is used as the
+        basis for the passing algorithm used by the AI). Additionally, thank you
+        to Dan Kobayashi, Justin Radziewicz,
+        and HollandOates (Jason) for reviewing the algorithm and recommending
+        changes. Should the cards passed by the AI meet your needs please praise
+        them. Should the cards you receive frustrate you, feel free to blame me.
+    </p>
+
+    <p><b>Important note</b>: your partner will try to short suit themselves in
+        red (if they can) and they expect you to short suit yourself in blue (if
+        you can).</p>
+
+    <h3>Game Overview</h3>
+    <p>You and your partner (who sits across from you) want to capture <b>4 or
+            more Boss Yokai (7s)</b> to win a round.
+        You will <b>lose the round if you win 7 tricks</b> before capturing 4
+        Boss Yokai.
+        If all tricks are played, then the team who won the last trick wins the
+        round.</p>
+
+    <h4>Card Distributions</h4>
+
+    <img src=" yokai-distribution.png" />
+
+    <h3>Round Setup</h3>
+
+    <p>The deck of 49 cards is shuffled. 12 cards are dealt face-down to each
+        player.</p>
+
+    <p>Next, one card is dealt face-up which determines the <b>Trump Suit</b>
+        for the round.</p>
+
+    <h3>Before the Round Begins</h3>
+
+    <p>Each player selects three cards to pass to their partner. You may pass
+        any cards. In the Trickster's Table implementation your partner is
+        expecting you to short suit yourself in blue and they are attempting to
+        short suit themselves in red.</p>
+
+    <p>In the first round of a game the player with the green A leads. The lead
+        moves clockwise to the next player after each hand.</p>
+
+    <h3>Game Play Rules</h3>
+    <p>Each round, you'll play multiple turns called Tricks where each player
+        will play one card from their hand.
+        The Lead Player will play first. They choose any card from their hand
+        and play it face-up in front of them. In clockwise order, the other
+        players must now play a
+        card of the same suit as the Lead Player. If a player has no cards of
+        that suit, they may play any card in their hand.</p>
+
+    <h4>Taking a trick</h4>
+    <p>After all players have played a card, check to see if anyone played the
+        <b>A card</b>. If they did, that player takes the trick.
+    </p>
+
+    <p>If no one played the A card, check if anyone played <b>a card of the
+            Trump Suit</b>. If anyone did, then the highest card of that suit
+        takes the trick.</p>
+
+    <p>Otherwise, if all players played the same suit then the highest card
+        takes the trick. If two different suits were played then the highest
+        card of the suit of the card played by the Lead Player
+        takes the trick.</p>
+
+    <p>The player who took the trick now becomes the Lead Player.</p>
+
+    <h3>End of a Round</h3>
+    <p>The round is over, and a round winner is determined, if any of the
+        following has happened.</p>
+
+    <ul>
+        <li>A team that has captured a total of <b>4 or more Boss Yokai cards
+                wins</b> the round.</li>
+        <li>A team has taken <b>7 tricks but has captured 3 or fewer Boss
+                Yokai cards. The other team wins</b> the round.</li>
+        <li>No one has cards left in their hands. <b>The team who won the last
+                trick</b> wins the round.</li>
+    </ul>
+
+    <h3>Scoring</h3>
+
+    <p>Only the team who won a round scores points. The other team <b>does
+            not score</b>, regardless of how many cards they took.</p>
+
+    <p>If a team has won the round because the other team took 7 tricks,
+        the winning team <b>takes all Boss Yokai cards remaining in all
+            players' hands</b>. They add these to the Boss Yokai they took this
+        round.</p>
+
+    <p>The winning team scores as many points as there are white stars on Boss
+        Yokai they captured this round (ignoring the Boss Yokai of the trump
+        suit).</p>
+
+    <h3>End of the Game</h3>
+    <p>If a team has 7 or more points they win!</p>
+
+    <p>Otherwise, a new hand is dealt and another round is played. The lead
+        alternates between players.</p>
+
+</body>

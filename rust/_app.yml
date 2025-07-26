@@ -1,0 +1,40 @@
+_version: 2
+# Common
+west:
+  en: West
+  es:
+east:
+  en: East
+  es:
+north:
+  en: North
+  es:
+you:
+  en: You
+  es:
+
+# Dealer's Dilemma
+dd.selectedACard:
+  en: %s selected a card
+  es:
+dd.selectPrimaryBidCard
+  en: Select your primary bid card
+  es:
+dd.selectSecondaryBidCard
+  en: Select your secondary bid card
+  es:
+dd.selectCardToTakeMandatoryTrump
+  en: Select a card to take\nand optionally name trump\nas its suit
+  es:
+dd.selectCardToTakeOptionalTrump
+  en: Select a card to take\nand name trump as its suit
+  es:
+
+# Short Zoot Suit
+# Hotdog
+# Kansas City
+# Pala
+# Six of VIII
+# Torchlit
+# Yokai Septet
+# Yokai Septet (4-player)

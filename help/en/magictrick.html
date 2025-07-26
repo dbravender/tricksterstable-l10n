@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 150%;
+        }
+
+        a {
+            text-decoration: underline;
+            color: lightblue;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Magic Trick: <i>The trick-taking game where you have a card up your
+            sleeve!</i></h2>
+
+    <p>Designed by Chris Wray</p>
+
+    <iframe width="100%" height="798"
+        src="https://www.youtube.com/embed/2ZCy9f9_5vs"
+        title="How to play Magic Trick in the Trickster&#39;s Table app"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <p>Supporters whose donations funded the development of this game (thank
+        you!):</p>
+
+    <ul>
+        <li><a
+                onclick="OpenLink.postMessage('https://anchor.fm/tricktalkers/')">Trick
+                Talkers</a></li>
+        <li>Justus</li>
+        <li>Adam Saunders</li>
+        <li>Justin Radziewicz</li>
+        <li>Shreesh</li>
+        <li>Taylor, Trick, and Table from <a
+                onclick="OpenLink.postMessage('https://www.youtube.com/channel/UCGeRFP9_y9lA14zUZZbBf5Q')">Taylor's
+                Trick Taking Table</a></li>
+        <li>3 anonymous supporters</li>
+    </ul>
+
+    <p>Please note that the rules have been edited to describe how Magic Trick
+        is played in the Trickster's Table app. No rules have been changed but
+        the interface does take care of some things for you. Rules explaining
+        how the game is played in real life can be found on the <a
+            onclick="OpenLink.postMessage('https://boardgamegeek.com/boardgame/383087/magic-trick')">Magic
+            Trick Board Game Geek page</a>.</p>
+
+    <h3>Deck Composition</h3>
+
+    <ul>
+        <li>56 cards</li>
+        <li>7 Suits, 0-7 in Each Suit, With Different Colored Backs</li>
+    </ul>
+
+    <h3>Setup</h3>
+
+    <p>The deck is shuffled and dealt. Each player receives 14 cards. Cards are
+        sorted by value from high to low. For the top and bottom player, this
+        means cards are sorted from top left (low) to bottom right (high). For
+        the left and right player cards are sorted from top to bottom top left
+        is low and bottom right is high.</p>
+
+    <h3>Gameplay</h3>
+
+    <p>The player to the left of the dealer starts the hand. They play a card of
+        their choosing into the trick, revealing it face up. Players then play
+        into this trick in clockwise order. Each player will play one card on
+        their turn, and they must follow suit if they can. If they cannot
+        follow, they can play any card. The winner of the trick is the player
+        playing the highest trump card; otherwise, it is the highest card of the
+        leading suit. The red suit (hearts) is always trump. The winner puts the
+        cards in front of them and leads the next trick. Play will continue
+        until all cards have been played.</p>
+
+    <p>After playing a card into a trick, but before the next player plays, a
+        player may also put a card "up their sleeve."" They put it face up on
+        the table for all to see (including themselves), and then their bid
+        counter is updated to show this value for the rest of the hand. All
+        players must put one card (but never more) up their sleeve at some point
+        in the hand immediately after playing a card; otherwise, their last card
+        when the hand ends will go up their sleeve. Cards up a sleeve cannot be
+        played into a trick.</p>
+
+    <p>Remember: a player can only put a card up their sleeve on their turn,
+        after they have already played into the trick. Thus, if a player's plan
+        was to put a card up their sleeve, but it is their only card that they
+        have to follow suit, they must play it to the trick instead.
+
+    <p>Scoring: <i>Bid Scoring</i>: Players earn three points if the face value
+        of the card up their sleeve matches the number of tricks they took,
+        including the 0 bet. Otherwise, they lose one point for the difference
+        between the face value and the number of tricks they took. (For example,
+        if a player took 1 or 5 tricks, and the card up their sleeve had a rank
+        of 3, they'd lose 2 points.)</p>
+
+    <p><i>Prestige Bonus</i>: Players earn an additional two-point bonus if they
+        met their bid and if the number of suits they took in their tricks
+        matches the rank of the card up their sleeve. There is no penalty for
+        missing the prestige bonus. This bonus also scores for the 0 bet.
+        Players can choose to play without the prestige bonus, but it is
+        recommended for advanced players. (Note: this rule is enabled in the
+        Trickster's Table implementation.)</p>
+
+    <p><b>Additional Hands and Victory Condition</b>: Play hands equal to the
+        number of players, rotating the dealer (and thus the start player)
+        clockwise each hand. Record the scores after each hand. High score wins
+        at the end of the game. In the event of a tie, the tied player who
+        received the prestige bonus more times wins. If playing without the
+        prestige bonus, the player among the tied players who hit their bid with
+        the fewest tricks in the last round wins. If there is still a tie,
+        victory is shared.</p>
+
+    <a name="reviews"></a>
+    <h3>Reviews of Magic Trick</h3>
+
+    <ul>
+        <li><a
+                onclick="OpenLink.postMessage('https://www.youtube.com/watch?v=0TX02v-hMt8')">Taylor's
+                Trick Taking Table</a> review of Magic Trick and T8</li>
+    </ul>
+
+</body>
+
+</html>
